@@ -11,12 +11,26 @@
 </div>
 <div class=content>
   <center>
+    <form action="{{url_for('show_posts')}}" method=post class=add-entry>
+      Title:<input type=text size=30 name=title /><br />
+      Text:<textarea name=text rows=5 cols=40></textarea>
+      <br />
+      <input type=submit value=share />
+
+    </form>
 
 <br />
 <br />
+{{ a }}
 <br />
   <img src="{{url_for('static',filename='img/FAicon.png')}}"/>
-  <br />{{ now }}
+  <br />
+  {% for entry in entries %}
+
+  <h5>{{ entry.title }}</h5>
+
+  {{ entry.text }}
+  {% endfor %}
 </center>
 </div>
 
