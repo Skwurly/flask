@@ -55,7 +55,7 @@ def show_posts():
         db.execute('insert into entries(title, text) values(?,?)',
                 [request.form['title'], request.form['text']])
     db.commit()
-    cur=db.execute('select title, text from entries order by id desc')
+    cur=db.execute('select title, text, date_created from entries order by id desc')
     entries = cur.fetchall()
     a = request.remote_addr
     return render_template('index.html', entries=entries, a=a)

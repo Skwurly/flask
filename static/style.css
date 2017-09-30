@@ -5,13 +5,15 @@
 div.header{
   background-color: black;
   height: 50px;
+  position: fixed;
+  width: 100%;
 }
 
 div.footer{
   bottom: 0px;
   background-color: black;
   height: 50px;
-  position: absolute;
+  position: fixed;
   width:100%
 }
 
@@ -23,4 +25,18 @@ h1.title{
 
 h6{
   color:white;
+}
+
+img.logo{
+  width:100px;
+  position: absolute;
+  right: 12px;
+  top: 10px;
+}
+
+p.ip{
+  color:#c0ff33;
+  position: absolute;
+  left: 40%;
+  top:5px;
 }
