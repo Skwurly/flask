@@ -1,5 +1,6 @@
 *{
   margin: 0;
+
 }
 
 div.header{
@@ -7,6 +8,11 @@ div.header{
   height: 50px;
   position: fixed;
   width: 100%;
+
+}
+
+div.content{
+  padding-top:100px;
 }
 
 div.footer{
@@ -39,4 +45,10 @@ p.ip{
   position: absolute;
   left: 40%;
   top:5px;
+}
+
+code{
+  background-color: grey;
+  width: 200px;
+  height: 100px;
 }

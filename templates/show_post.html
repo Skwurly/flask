@@ -1,0 +1,16 @@
+{%extends 'layout.html'%}
+{% block body %}
+<center>
+<br />
+<br />
+<br />
+ <pre>
+{% for entry in entries %}
+<h3>{{ entry.title }}</h3>
+<h5>{{ entry.date_created }}</h5>
+  {{ entry.text }}
+{% endfor %}
+      </pre>
+</center>
+</div>
+{% endblock %}

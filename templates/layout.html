@@ -1,0 +1,32 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=3">
+  <title>~#erg</title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css')}}" />
+</head>
+
+
+<body>
+<div class=header>
+<h1 class=title>#erg</h1><p class=ip>YOUR IPV4 = {{ a }}</p>
+<a href="{{ url_for('add_post') }}">
+<img class=logo src="{{url_for('static',filename='img/FAicon.png')}}"/>
+</a>
+</div>
+</br>
+
+
+{% block body %}
+{% endblock %}
+
+
+<div class=footer>
+<br /><center>
+<h6>earlshart@gmail.com</h6>
+{% if session.logged_in %}
+<h6><a href="{{url_for('logout')}}">logout</a></h6>
+{% endif %}
+</center>
+</div>
+
+</body>
+</html>

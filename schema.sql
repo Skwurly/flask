@@ -4,5 +4,4 @@ create table entries(
   date_created date default current_date,
   title text not null,
   'text' text not null
-  img 
 );
